@@ -34,9 +34,13 @@ var x = [
         
     ]
 
+
+
+ var lastIndex = 0 ;          // متغير وظيفته اني احط فيه قيمة الراندوم بعد الدورة الأولي عشان متتكررش في الدورة التانية
+
 function skip(){
     
-    var numbers = [];
+    // var numbers = [];
    
     // var random;
     // do {
@@ -44,11 +48,14 @@ function skip(){
     // } while (numbers.includes(random));
     // numbers.push(random);   
 
-
+    var random;
     do {
         random= Math.floor(Math.random()*x.length);
-    } while (numbers.indexOf(random) !== -1);
+    } while (random == lastIndex);
 
+    lastIndex = random ;
+
+    // random= Math.floor(Math.random()*x.length);
     
     // var random = Math.random() ;
     
@@ -61,5 +68,23 @@ function skip(){
     window.document.getElementById('p2').innerHTML=x[random].quotes;
     window.document.getElementById('p3').innerHTML=x[random].authers;
     
+    
 };
 
+
+// var lastIndex = -1;
+
+// function skip() {
+//     // Generate a random index different from the last one
+//     var randomIndex;
+//     do {
+//         randomIndex = Math.floor(Math.random() * x.length);
+//     } while (randomIndex === lastIndex);
+
+//     // Update the last index
+//     lastIndex = randomIndex;
+
+//     // Update the HTML elements
+//     window.document.getElementById('p2').innerHTML = x[randomIndex].quotes;
+//     window.document.getElementById('p3').innerHTML = x[randomIndex].authers;
+// }

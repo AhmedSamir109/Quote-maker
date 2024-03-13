@@ -22,10 +22,7 @@
 button {
     width: 250px;
     height: 80px;
-    background-color: blue;
+    background-color: green;
     color: white;
 }
 
-button:hover{
-    background-color: green;
-}
